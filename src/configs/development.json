@@ -1,9 +1,13 @@
 {
     "env": "development",
     "dbConfig": {
-        "host": "localhost",
-        "database": "mongoose",
-        "port": 27017
+        "host": "atlas",
+        "database": "members-management",
+        "port": null,
+        "username"  :"devnassim",
+        "password" : "PjJs8sgLs2qwx5h",
+        "cluster" : "cluster0"
+
     },
     "secretKey": "secretKey",
     "log": {
