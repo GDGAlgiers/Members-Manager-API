@@ -1,5 +1,5 @@
 import { MemberRole, MembershipStatus } from '@/interfaces/members.interface';
-import { IsArray, IsDate, IsEmail, IsPhoneNumber, IsObject, IsString } from 'class-validator';
+import { IsArray, IsEmail, IsPhoneNumber, IsObject, IsString, IsDateString } from 'class-validator';
 
 export class CreateMemberDto {
   @IsString()
@@ -12,18 +12,18 @@ export class CreateMemberDto {
   public phoneNumber: string;
   @IsPhoneNumber()
   public secondPhoneNumber?: string;
-  @IsDate()
+  @IsDateString()
   public dateOfBirth: Date;
   //TODO! provide better validation for occupation based on enum
   @IsString()
   public occupation: string;
   @IsString()
   public organization: string;
-  @IsDate()
+  @IsDateString()
   public enrolledIn: Date;
   //TODO! validate using enum
   @IsString()
-  public membershipState: MembershipStatus;
+  public membershipStatus: MembershipStatus;
   @IsArray()
   public seasons: string[];
   //TODO! provide better validation
